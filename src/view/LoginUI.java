@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginUI extends JFrame{
+public class LoginUI extends JFrame {
     private JPanel container;
     private JPanel pnl_top;
     private JLabel lbl_title;
@@ -16,16 +16,17 @@ public class LoginUI extends JFrame{
     private JLabel lbl_password;
     private JPasswordField fld_password;
 
-    public LoginUI(){
+    public LoginUI() {
         this.add(container);
         this.setTitle("Müşteri Yönetim Sistemi");
-        this.setSize(400,400);
+        this.setSize(400, 400);
 
         int x = (Toolkit.getDefaultToolkit().getScreenSize().width - this.getSize().width) / 2;
         int y = (Toolkit.getDefaultToolkit().getScreenSize().height - this.getSize().width) / 2;
-        this.setLocation(x,y);
+        this.setLocation(x, y);
         this.setVisible(true);
-        this.btn_login.addActionListener(e -> System.out.println("Butona tıklanıldı."));
-    }
+        this.btn_login.addActionListener(e -> {
 
+        });
+    }
 }
