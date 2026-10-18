@@ -22,7 +22,7 @@ public class Database {
             exception.printStackTrace();
         }
     }
-
+    
     private Connection getConnection() {
         return connection;
     }

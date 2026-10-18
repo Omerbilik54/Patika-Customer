@@ -12,9 +12,10 @@ public class App {
         Helper.setTheme();
         //Connection connect1 = Database.getInstance();
         LoginUI loginUI = new LoginUI();
-
     }
 }
+
+
 
 
 
