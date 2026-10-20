@@ -29,6 +29,7 @@ public class DashboardUI extends JFrame {
         // Pencereyi görünür yapar.
         this.setVisible(true);
 
+
         System.out.println(this.user.toString());
 
     }
