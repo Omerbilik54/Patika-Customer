@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class LoginUI extends JFrame {
     private JPanel container;
@@ -47,11 +48,17 @@ public class LoginUI extends JFrame {
             }else if(!Helper.isEmailValid(this.fld_mail.getText())){
             Helper.showMsg("Geçerli bir e-posta adresi giriniz.");
             }else{
-                User user = this.userController.findByLogin(this.fld_mail.getText(), this.fld_password.getText());
+                User user = null;
+                try {
+                    user = this.userController.findByLogin(this.fld_mail.getText(), this.fld_password.getText());
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
                 if(user == null){
                     Helper.showMsg("Girdiğiniz bilgilerle eşleşen bir kullanıcı bulunamadı.");
                 }else{
-                    System.out.println(user.toString());
+                    this.dispose();
+                    DashboardUI dashboardUI = new DashboardUI(user);
                 }
             }
         });
