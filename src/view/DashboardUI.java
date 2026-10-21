@@ -6,6 +6,7 @@ import entity.User;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class DashboardUI extends JFrame {
 
     private JPanel container;
